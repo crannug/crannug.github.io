@@ -127,3 +127,10 @@ ul[role="list"] {
   gap: var(--space-3);
   margin-block-start: var(--space-3);
 }
+
+footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}

@@ -105,7 +105,21 @@ function App() {
           </section>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        <div className="container">
+          <p>
+            © {new Date().getFullYear()} Gunnar Cox · built with React and
+            TypeScript ·{" "}
+            <a
+              href="https://github.com/crannug/crannug.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              source on GitHub
+            </a>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
