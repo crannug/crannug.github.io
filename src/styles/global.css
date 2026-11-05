@@ -42,3 +42,34 @@ a {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
+
+header {
+  /*for the nav bar */
+  position: sticky;
+  top: 0;
+  z-index: 1; /* now the nav bar sits on top of the scrolling content */
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-200%);
+  top: 0;
+  left: 0;
+  z-index: 2; /* sits on top of the header*/
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  background: var(--color-accent);
+  color: white;
+  padding: var(--space-2);
+}

@@ -25,6 +25,6 @@
 
   /* layout and radius */
   --content-max: 66rem;
-  --measure: 66ch;
+  --measure: 80ch;
   --radius: 10px;
 }
