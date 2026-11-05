@@ -15,10 +15,11 @@ h3 {
 
 h1 {
   font-size: var(--text-2xl);
+  margin-block-start: 0;
 }
 h2 {
   font-size: var(--text-xl);
-  margin-block-end: var(--space-3);
+  margin-block-end: var(--space-2);
 }
 h3 {
   font-size: var(--text-lg);
@@ -77,7 +78,7 @@ header {
 
 /* padded section gaps */
 main section {
-  padding-block: var(--space-5);
+  padding-block: var(--space-4);
 }
 
 /* cards, grid, as many as fit, at least 16rem wide */

@@ -6,7 +6,7 @@ ul {
 
 nav a {
   color: var(--color-text);
-  transition: color 0.15s ease;
+  transition: color 0.15s ease-in-out;
 }
 
 nav a:hover {
