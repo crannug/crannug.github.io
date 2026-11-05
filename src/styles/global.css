@@ -61,15 +61,48 @@ header {
 
 .skip-link {
   position: absolute;
-  transform: translateY(-200%);
+  transform: translateY(-200%); /* send it to the stratosphere */
   top: 0;
   left: 0;
   z-index: 2; /* sits on top of the header*/
 }
 
 .skip-link:focus {
-  transform: translateY(0);
+  transform: translateY(0); /* bring it back down on tab focus */
   background: var(--color-accent);
   color: white;
   padding: var(--space-2);
+}
+
+/* padded section gaps */
+main section {
+  padding-block: var(--space-5);
+}
+
+/* cards, grid, as many as fit, at least 16rem wide */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+
+/* boxed item: interest, project card, maybe other stuff in the future */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
+
+/* no top margin on the first item in a pad (heading) */
+.card > :first-child {
+  margin-block-start: 0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted); /* 4.57:1 on --color-surface */
 }

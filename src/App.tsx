@@ -1,4 +1,6 @@
 import Nav from "./components/Nav.tsx";
+import { interests } from "./data/interests";
+
 function App() {
   return (
     <>
@@ -32,6 +34,14 @@ function App() {
           </section>
           <section id="interests">
             <h2>interests</h2>
+            <ul role="list" className="card-grid">
+              {interests.map((interest) => (
+                <li key={interest.name} className="card">
+                  <h3>{interest.name}</h3>
+                  <p>{interest.blurb}</p>
+                </li>
+              ))}
+            </ul>
           </section>
           <section id="projects">
             <h2>projects</h2>
