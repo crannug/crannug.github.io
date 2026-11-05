@@ -18,6 +18,7 @@ h1 {
 }
 h2 {
   font-size: var(--text-xl);
+  margin-block-end: var(--space-3);
 }
 h3 {
   font-size: var(--text-lg);
@@ -82,7 +83,10 @@ main section {
 /* cards, grid, as many as fit, at least 16rem wide */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    min(16rem, 100%)
+  ); /*any very narrow screen has no scrolling*/
   gap: var(--space-4);
 }
 
@@ -105,4 +109,21 @@ main section {
   gap: var(--space-2);
   font-size: var(--text-sm);
   color: var(--color-text-muted); /* 4.57:1 on --color-surface */
+}
+
+/* fix large gap on the left of list items */
+ul[role="list"] {
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+
+.project-status {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-3);
+  margin-block-start: var(--space-3);
 }
